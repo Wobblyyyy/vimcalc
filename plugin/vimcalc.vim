@@ -17,12 +17,7 @@ function! s:Vcalc(...)
     execute '!' . g:vimcalcPath . ' vc ' . a:1
 endfunction
 
-function! s:Icalc(...)
-    execute '!' . g:vimcalcPath . ' i '
-endfunction
-
 command! -nargs=? Calc call s:Calc(<f-args>)
 command! -nargs=? Vcalc call s:Vcalc(<f-args>)
-command! -nargs=? Icalc call s:Icalc(<f-args>)
 
 let g:did_vimcalc_load = 1
